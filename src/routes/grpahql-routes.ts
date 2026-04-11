@@ -1,11 +1,11 @@
 import { createApp } from "@aklinker1/zeta";
-import PLAYGROUND_HTML_TEMPLATE from "../assets/playground.html.tmpl" with { type: "text" };
+import PLAYGROUND_HTML_TEMPLATE from "../assets/playground.html" with { type: "text" };
 import { version } from "../../package.json";
 import { createGraphql } from "../graphql";
 import { z } from "zod";
 import dedent from "dedent";
 
-const PLAYGROUND_HTML = PLAYGROUND_HTML_TEMPLATE.replace(
+const PLAYGROUND_HTML = (PLAYGROUND_HTML_TEMPLATE as any as string).replace(
   "{{VERSION}}",
   version,
 );

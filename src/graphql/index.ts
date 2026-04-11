@@ -1,5 +1,5 @@
 import { buildSchema, graphql } from "graphql";
-import gqlSchema from "../assets/schema.gql";
+import gqlSchema from "../assets/schema.gql" with { type: "text" };
 import { rootResolver } from "./resolvers";
 import { consola } from "consola";
 import pc from "picocolors";

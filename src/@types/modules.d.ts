@@ -3,7 +3,7 @@ declare module "*.gql" {
   export default text;
 }
 
-declare module "*.tmpl" {
+declare module "*.html" {
   const text: string;
   export default text;
 }

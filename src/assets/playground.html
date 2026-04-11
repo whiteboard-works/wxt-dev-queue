@@ -47,24 +47,24 @@
     </script>
     <script type="module">
       // Import React and ReactDOM
-      import React from 'react';
-      import ReactDOM from 'react-dom/client';
+      import React from "react";
+      import ReactDOM from "react-dom/client";
       // Import GraphiQL and the Explorer plugin
-      import { GraphiQL, HISTORY_PLUGIN } from 'graphiql';
-      import { createGraphiQLFetcher } from '@graphiql/toolkit';
-      import { explorerPlugin } from '@graphiql/plugin-explorer';
+      import { GraphiQL, HISTORY_PLUGIN } from "graphiql";
+      import { createGraphiQLFetcher } from "@graphiql/toolkit";
+      import { explorerPlugin } from "@graphiql/plugin-explorer";
 
-      import createJSONWorker from 'https://esm.sh/monaco-editor/esm/vs/language/json/json.worker.js?worker';
-      import createGraphQLWorker from 'https://esm.sh/monaco-graphql/esm/graphql.worker.js?worker';
-      import createEditorWorker from 'https://esm.sh/monaco-editor/esm/vs/editor/editor.worker.js?worker';
+      import createJSONWorker from "https://esm.sh/monaco-editor/esm/vs/language/json/json.worker.js?worker";
+      import createGraphQLWorker from "https://esm.sh/monaco-graphql/esm/graphql.worker.js?worker";
+      import createEditorWorker from "https://esm.sh/monaco-editor/esm/vs/editor/editor.worker.js?worker";
 
       globalThis.MonacoEnvironment = {
         getWorker(_workerId, label) {
-          console.info('MonacoEnvironment.getWorker', { label });
+          console.info("MonacoEnvironment.getWorker", { label });
           switch (label) {
-            case 'json':
+            case "json":
               return createJSONWorker();
-            case 'graphql':
+            case "graphql":
               return createGraphQLWorker();
           }
           return createEditorWorker();
@@ -72,7 +72,7 @@
       };
 
       const fetcher = createGraphiQLFetcher({
-        url: '/api'
+        url: "/api",
       });
       const plugins = [HISTORY_PLUGIN, explorerPlugin()];
 
@@ -84,7 +84,7 @@
         });
       }
 
-      const container = document.getElementById('graphiql');
+      const container = document.getElementById("graphiql");
       const root = ReactDOM.createRoot(container);
       root.render(React.createElement(App));
     </script>
