@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.4.4
+
+[compare changes](https://github.com/wxt-dev/queue/compare/v0.4.3...v0.4.4)
+
+### 🚀 Enhancements
+
+- Add base `Extension` interface to GQL schema ([5dbd328](https://github.com/wxt-dev/queue/commit/5dbd328))
+
+### 📖 Documentation
+
+- Fix typo ([48c2fe3](https://github.com/wxt-dev/queue/commit/48c2fe3))
+- Update README ([d794b51](https://github.com/wxt-dev/queue/commit/d794b51))
+
+### 🏡 Chore
+
+- Upgrade to Bun 1.3.12 ([27d90bc](https://github.com/wxt-dev/queue/commit/27d90bc))
+- Fix failing tests ([fdcce65](https://github.com/wxt-dev/queue/commit/fdcce65))
+
+### ❤️ Contributors
+
+- Aaron ([@aklinker1](https://github.com/aklinker1))
+
 ## v0.4.3
 
 [compare changes](https://github.com/wxt-dev/queue/compare/v0.4.2...v0.4.3)
