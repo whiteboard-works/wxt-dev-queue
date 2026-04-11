@@ -27,12 +27,12 @@
   "devDependencies": {
     "@aklinker1/check": "^2.4.0",
     "@types/bun": "latest",
+    "@typescript/native-preview": "^7.0.0-dev.20260411.1",
     "code-block-writer": "^12.0.0",
     "nano-staged": "^1.0.2",
-    "oxlint": "^1.6.0",
-    "prettier": "^3.2.5",
-    "simple-git-hooks": "^2.9.0",
-    "typescript": "^5.8.3"
+    "oxlint": "^1.59.0",
+    "prettier": "^3.8.2",
+    "simple-git-hooks": "^2.9.0"
   },
   "simple-git-hooks": {
     "pre-commit": "./node_modules/.bin/nano-staged"
