@@ -3,6 +3,7 @@ import PLAYGROUND_HTML_TEMPLATE from "../assets/playground.html.tmpl" with { typ
 import { version } from "../../package.json";
 import { createGraphql } from "../graphql";
 import { z } from "zod/v4";
+import dedent from "dedent";
 
 const PLAYGROUND_HTML = PLAYGROUND_HTML_TEMPLATE.replace(
   "{{VERSION}}",
@@ -27,19 +28,21 @@ export const graphqlRoutes = createApp()
         })
         .meta({
           example: {
-            query: `query GetExtension($id: String!) {
-  chromeExtension(id: $id) {
-    id
-    screenshots { rawUrl }
-  }
-}`,
+            query: dedent`
+              query GetExtension($id: String!) {
+                chromeExtension(id: $id) {
+                  id
+                  screenshots { rawUrl }
+                }
+              }
+            `,
             variables: {
               id: "ocfdgncpifmegplaglcnglhioflaimkd",
             },
             operationName: "GetExtension",
           },
         }),
-      response: z
+      responses: z
         .object({
           data: z.any().optional(),
           errors: z.any().array().optional(),
@@ -69,11 +72,13 @@ export const graphqlRoutes = createApp()
   .get(
     "/playground",
     {
-      summary: "Playground",
+      operationId: "playground",
       tags: ["GraphQL"],
-      description:
-        "Open the GraphiQL playground. This is where you can interact and test out the GraphQL API. It also contains the GraphQL documentation explorer.",
-      response: z.string().meta({ contentType: "text/html" }),
+      description: dedent`
+        Open the GraphiQL playground. This is where you can interact and test out
+        the GraphQL API. It also contains the GraphQL documentation explorer.
+      `,
+      responses: z.string().meta({ contentType: "text/html" }),
     },
     ({ set }) => {
       set.headers["Content-Type"] = "text/html; charset=utf-8";

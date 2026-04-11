@@ -25,7 +25,7 @@ const app = createApp({
     ],
   },
 })
-  .onError(({ error }) => void consola.error(error))
+  .onGlobalError(({ error }) => void consola.error(error))
   .use(corsPlugin)
   .use(restRoutes)
   .use(graphqlRoutes)
@@ -47,7 +47,7 @@ const app = createApp({
       summary: "Health Check",
       tags: ["System"],
       description: "Used to make sure the API is up and running.",
-      response: z.object({
+      responses: z.object({
         status: z.literal("ok"),
         version: z.string(),
       }),

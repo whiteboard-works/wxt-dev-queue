@@ -1,8 +1,8 @@
 import { createApp } from "@aklinker1/zeta";
 import { z } from "zod/v4";
 import { contextPlugin } from "../plugins/context-plugin";
-import { NotFoundError } from "@aklinker1/zeta/errors";
-import { Status } from "@aklinker1/zeta/status";
+import { NotFoundHttpError } from "@aklinker1/zeta";
+import { HttpStatus } from "@aklinker1/zeta";
 
 export const restRoutes = createApp()
   .use(contextPlugin)
@@ -24,9 +24,9 @@ export const restRoutes = createApp()
         params.index,
       );
       if (!screenshotUrl)
-        throw new NotFoundError("Extension or screenshot not found");
+        throw new NotFoundHttpError("Extension or screenshot not found");
 
-      set.status = Status.Found;
+      set.status = HttpStatus.Found;
       set.headers["Location"] = screenshotUrl;
     },
   )
@@ -48,9 +48,9 @@ export const restRoutes = createApp()
         params.index,
       );
       if (!screenshotUrl)
-        throw new NotFoundError("Extension or screenshot not found");
+        throw new NotFoundHttpError("Extension or screenshot not found");
 
-      set.status = Status.Found;
+      set.status = HttpStatus.Found;
       set.headers["Location"] = screenshotUrl;
     },
   );
