@@ -1,4 +1,4 @@
-// Bun Snapshot v1, https://goo.gl/fbAQLP
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
 
 exports[`Chrome Web Store Crawler should extract extension details from 2025-02-26-kofbbilhmnkcmibjbioafflgmpkbnmme.html 1`] = `
 {
@@ -78,6 +78,7 @@ AI Integration: Extract and convert relevant website information into markdown f
   ],
   "shortDescription": "Convert webpages to Markdown.  Easily convert headers, text, tables or code snippets to Markdown.",
   "storeUrl": "https://chromewebstore.google.com/detail/html-to-markdown/kofbbilhmnkcmibjbioafflgmpkbnmme?hl=en",
+  "users": 77,
   "version": "0.0.13",
   "weeklyActiveUsers": 77,
 }
@@ -117,6 +118,7 @@ https://github.com/aklinker1/github-better-line-counts"
   ],
   "shortDescription": "Remove generated files from GitHub line counts",
   "storeUrl": "https://chromewebstore.google.com/detail/github-better-line-counts/ocfdgncpifmegplaglcnglhioflaimkd?hl=en",
+  "users": 251,
   "version": "1.7.1",
   "weeklyActiveUsers": 251,
 }
@@ -216,6 +218,7 @@ Absolutely! Blync is 100% secure.
   ],
   "shortDescription": "Preview links, search the web without leaving your current tab and use AI (ChatGPT, Gemini) in popup and sidebar",
   "storeUrl": "https://chromewebstore.google.com/detail/blync-preview-links-selec/odffpjnpocjfcaclnenaaaddghkgijdb?hl=en",
+  "users": 40,
   "version": "0.3.3",
   "weeklyActiveUsers": 40,
 }
