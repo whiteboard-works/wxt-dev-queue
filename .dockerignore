@@ -1,5 +1,14 @@
+.github
 node_modules
-**/*.test.*
-/.*
 /*.md
-tsconfig.tsbuildinfo
+.gitignore
+**/*.test.*
+cspell.yml
+scripts
+LICENSE
+Dockerfile
+.output
+.prettierignore
+.git
+.gitattributes
+.dockerignore

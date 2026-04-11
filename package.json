@@ -4,15 +4,16 @@
   "type": "module",
   "packageManager": "bun@1.3.12",
   "scripts": {
+    "check": "check",
     "dev": "bun run --watch scripts/dev.ts",
+    "build": "bun build src/main.ts --compile --minify --sourcemap --bytecode --outfile .output/server",
     "gen": "bun run gen:types",
     "gen:types": "bun run scripts/generate-types.ts",
     "docker:build": "docker build . -t aklinker1/store-api",
-    "docker:run": "docker run -it -p 3000:3000 aklinker1/store-api",
+    "docker:run": "docker run --rm -p 3000:3000 aklinker1/store-api",
     "docker:build:amd": "bun docker:build --platform linux/amd64",
     "docker:push": "bun docker:build --platform linux/amd64 && docker push aklinker1/store-api",
-    "postinstall": "simple-git-hooks",
-    "check": "check"
+    "postinstall": "simple-git-hooks"
   },
   "dependencies": {
     "@aklinker1/zero-ioc": "^1.5.1",

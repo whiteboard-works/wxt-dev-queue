@@ -5,6 +5,7 @@ logs
 # Generated files
 node_modules
 dist
+.output
 src/@types/gql.d.ts
 tsconfig.tsbuildinfo
 
