@@ -2,7 +2,7 @@
   "name": "@wxt-dev/queue",
   "version": "0.4.3",
   "type": "module",
-  "packageManager": "bun@1.2.18",
+  "packageManager": "bun@1.3.12",
   "scripts": {
     "dev": "bun run --watch scripts/dev.ts",
     "gen": "bun run gen:types",
