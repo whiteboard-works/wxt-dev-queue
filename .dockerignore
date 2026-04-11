@@ -1,4 +1,5 @@
 node_modules
-dist
-README.md
-.gitignore
+**/*.test.*
+/.*
+/*.md
+tsconfig.tsbuildinfo
