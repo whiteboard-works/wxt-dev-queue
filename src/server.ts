@@ -6,8 +6,7 @@ import { restRoutes } from "./routes/rest-routes";
 import { zodSchemaAdapter } from "@aklinker1/zeta/adapters/zod-schema-adapter";
 import { version } from "../package.json";
 import { z } from "zod";
-import API_REFERENCE_DESCRIPTION from "./assets/api-reference-description.md" with { type: "text" };
-import GRAPHQL_DESCRIPTION from "./assets/graphql-description.md" with { type: "text" };
+import dedent from "dedent";
 
 const app = createApp({
   schemaAdapter: zodSchemaAdapter,
@@ -15,10 +14,33 @@ const app = createApp({
     info: {
       title: "WXT Queue API Reference",
       version,
-      description: API_REFERENCE_DESCRIPTION,
+      description: dedent`
+        # Overview
+
+        As of right now, the WXT Queue API is free to use with no authentication
+        requirements.
+
+        > [!IMPORTANT]
+        > If you want to keep it this way, **be respectful of how you use it**.
+        > Do not spam or abuse it.
+
+        <br/>
+
+        ## REST vs GraphQL
+
+        The WXT Queue API is mostly a GraphQL API, with a few REST endpoints.
+        This document covers all the REST endpoints, including the one used to
+        make GraphQL requests.
+      `,
     },
     tags: [
-      { name: "GraphQL", description: GRAPHQL_DESCRIPTION },
+      {
+        name: "GraphQL",
+        description: dedent`
+          To play around with the GraphQL API, checkout the
+          [GraphiQL Playground](/playground).
+        `,
+      },
       { name: "Chrome Extensions" },
       { name: "Firefox Addons" },
       { name: "System" },
