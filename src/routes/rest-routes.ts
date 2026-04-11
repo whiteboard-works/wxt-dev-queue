@@ -1,5 +1,5 @@
 import { createApp } from "@aklinker1/zeta";
-import { z } from "zod/v4";
+import { z } from "zod";
 import { contextPlugin } from "../plugins/context-plugin";
 import { NotFoundHttpError } from "@aklinker1/zeta";
 import { HttpStatus } from "@aklinker1/zeta";

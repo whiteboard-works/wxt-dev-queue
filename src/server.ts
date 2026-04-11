@@ -5,7 +5,7 @@ import { graphqlRoutes } from "./routes/grpahql-routes";
 import { restRoutes } from "./routes/rest-routes";
 import { zodSchemaAdapter } from "@aklinker1/zeta/adapters/zod-schema-adapter";
 import { version } from "../package.json";
-import { z } from "zod/v4";
+import { z } from "zod";
 import API_REFERENCE_DESCRIPTION from "./assets/api-reference-description.md" with { type: "text" };
 import GRAPHQL_DESCRIPTION from "./assets/graphql-description.md" with { type: "text" };
 
