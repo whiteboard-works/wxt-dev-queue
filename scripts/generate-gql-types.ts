@@ -16,6 +16,11 @@ export async function generateGqlTypes(fetch: ServerSideFetch = app.build()) {
   consola.info("Generating GraphQL types...");
   const introspection = await introspect(fetch);
 
+  if (introspection.errors) {
+    console.error("Introspection errors:", introspection.errors);
+    throw Error("Introspection failed", { cause: introspection.errors });
+  }
+
   const {
     queryType,
     mutationType,
@@ -50,6 +55,8 @@ export async function generateGqlTypes(fetch: ServerSideFetch = app.build()) {
           return writeObjectType(code, argTypes, type);
         case "SCALAR":
           return writeScalarType(code, type);
+        case "INTERFACE":
+          return writeObjectType(code, argTypes, type);
         default:
           return consola.warn("Unknown kind:", {
             kind: type.kind,

@@ -29,6 +29,7 @@ export function createFirefoxApiClient() {
         shortDescription: Object.values<string>(json.summary)[0]!,
         storeUrl: json.url,
         version: json.current_version.version,
+        users: json.average_daily_users,
         dailyActiveUsers: json.average_daily_users,
         screenshots: (json.previews as any[]).map<Gql.Screenshot>(
           (preview, i) => ({

@@ -21,14 +21,19 @@ type Query {
   firefoxAddons(ids: [String!]!): [FirefoxAddon]!
 }
 
-type ChromeExtension {
+interface Extension {
   id: String!
   name: String!
   iconUrl: String!
   storeUrl: String!
   shortDescription: String!
   longDescription: String!
-  weeklyActiveUsers: Int!
+  """
+  Different extension stores report users in different units (e.g., weekly active users, daily active users).
+
+  This field is meant to be used as a generic representation of the number of users. Each type that extends this one has individual fields denoting the unit (`ChromeExtension.weeklyActiveUsers`, `FirefoxAddon.dailyActiveUsers`, etc).
+  """
+  users: Int!
   version: String!
   lastUpdated: String!
   rating: Float
@@ -36,19 +41,48 @@ type ChromeExtension {
   screenshots: [Screenshot!]!
 }
 
-type FirefoxAddon {
+type ChromeExtension implements Extension {
+  # Extension fields
+
   id: String!
   name: String!
   iconUrl: String!
   storeUrl: String!
   shortDescription: String!
   longDescription: String!
-  dailyActiveUsers: Int!
+  "Same as weeklyActiveUsers"
+  users: Int!
   version: String!
   lastUpdated: String!
   rating: Float
   reviewCount: Int
   screenshots: [Screenshot!]!
+
+  # Additional fields
+
+  weeklyActiveUsers: Int!
+}
+
+type FirefoxAddon implements Extension {
+  # Extension fields
+
+  id: String!
+  name: String!
+  iconUrl: String!
+  storeUrl: String!
+  shortDescription: String!
+  longDescription: String!
+  "Same as dailyActiveUsers"
+  users: Int!
+  version: String!
+  lastUpdated: String!
+  rating: Float
+  reviewCount: Int
+  screenshots: [Screenshot!]!
+
+  # Additional fields
+
+  dailyActiveUsers: Int!
 }
 
 type Screenshot {

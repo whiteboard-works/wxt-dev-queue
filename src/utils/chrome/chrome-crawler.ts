@@ -59,7 +59,7 @@ export async function crawlExtension(
 
   // Header
 
-  const weeklyActiveUsers = tryExtract("weeklyActiveUsers", validateInt, [
+  const weeklyActiveUsersText = tryExtract("weeklyActiveUsers", validateInt, [
     () => {
       const userCountRow = document.querySelector(
         "main > * > section:first-child > section > div > div:last-child",
@@ -74,6 +74,7 @@ export async function crawlExtension(
       );
     },
   ]);
+  const weeklyActiveUsers = Number(weeklyActiveUsersText);
 
   const rating = tryExtract("rating", validateFloat, [
     () =>
@@ -149,7 +150,8 @@ export async function crawlExtension(
     name,
     iconUrl,
     storeUrl,
-    weeklyActiveUsers: Number(weeklyActiveUsers),
+    users: weeklyActiveUsers,
+    weeklyActiveUsers,
     lastUpdated,
     version,
     shortDescription,
