@@ -1,0 +1,13 @@
+ignorePaths:
+  - "**/fixtures/**"
+  - CHANGELOG.md
+  - src/@types/gql.d.ts
+  - "**/*.snap"
+words:
+  - aklinker
+  - klinker
+  - linkedom
+  - oxlint
+  - importmap
+  - ocfdgncpifmegplaglcnglhioflaimkd
+  - grpahql
