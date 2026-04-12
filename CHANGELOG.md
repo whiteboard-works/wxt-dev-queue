@@ -1,5 +1,32 @@
 # Changelog
 
+## v0.4.5
+
+[compare changes](https://github.com/wxt-dev/queue/compare/v0.4.4...v0.4.5)
+
+### 🚀 Enhancements
+
+- Add support for getting edge extensions by CRX ID ([#7](https://github.com/wxt-dev/queue/pull/7))
+
+### 💅 Refactors
+
+- Standardize and share store definitions ([#8](https://github.com/wxt-dev/queue/pull/8))
+
+### 🏡 Chore
+
+- Switch to nano-staged ([25353e4](https://github.com/wxt-dev/queue/commit/25353e4))
+- Fix cors issue due to an async global hook ([a249ffb](https://github.com/wxt-dev/queue/commit/a249ffb))
+- Cleanup unnecessary config files ([aa0d746](https://github.com/wxt-dev/queue/commit/aa0d746))
+- Remove separate markdown files ([b9f50e0](https://github.com/wxt-dev/queue/commit/b9f50e0))
+- Cleanup docker ignore ([d87433f](https://github.com/wxt-dev/queue/commit/d87433f))
+- Add cspell ([422d817](https://github.com/wxt-dev/queue/commit/422d817))
+- Optimize docker image size 225MB -> 107MB ([b5b9a07](https://github.com/wxt-dev/queue/commit/b5b9a07))
+- Fix `ctx: any` in graphql resolvers ([ae09580](https://github.com/wxt-dev/queue/commit/ae09580))
+
+### ❤️ Contributors
+
+- Aaron ([@aklinker1](https://github.com/aklinker1))
+
 ## v0.4.4
 
 [compare changes](https://github.com/wxt-dev/queue/compare/v0.4.3...v0.4.4)
