@@ -10,6 +10,7 @@ export function createEdgeApi(): EdgeApi {
     res: GetProductDetailsByCrxId200Response,
   ): Gql.EdgeAddon => ({
     id: res.crxId,
+    productId: res.storeProductId,
     iconUrl: `https:${res.logoUrl}`, // URL without the schema (ex: "//store-images.s-microsoft.com/image/...")
     lastUpdated: new Date(res.lastUpdateDate * 1000).toISOString(),
     longDescription: res.description,

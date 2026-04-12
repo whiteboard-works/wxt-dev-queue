@@ -92,6 +92,8 @@ type FirefoxAddon implements Extension {
 
   # Additional fields
 
+  slug: String!
+  guid: String!
   dailyActiveUsers: Int!
 }
 
@@ -116,6 +118,7 @@ type EdgeAddon implements Extension {
 
   "Number of users shown on `microsoftedge.microsoft.com`"
   activeInstallCount: Int!
+  productId: String!
 }
 
 type Screenshot {
