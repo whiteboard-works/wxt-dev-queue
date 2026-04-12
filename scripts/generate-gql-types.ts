@@ -16,11 +16,6 @@ export async function generateGqlTypes(fetch: ServerSideFetch = app.build()) {
   consola.info("Generating GraphQL types...");
   const introspection = await introspect(fetch);
 
-  if (introspection.errors) {
-    console.error("Introspection errors:", introspection.errors);
-    throw Error("Introspection failed", { cause: introspection.errors });
-  }
-
   const {
     queryType,
     mutationType,
@@ -147,7 +142,12 @@ async function introspect(fetch: ServerSideFetch): Promise<any> {
     method: "POST",
   });
   const res = await fetch(request);
-  if (res.ok) return await res.json();
+  if (!res.ok)
+    throw Error("Introspection request failed: " + (await res.text()));
 
-  throw Error("Introspection request failed: " + (await res.text()));
+  const json: any = await res.json();
+  if (json.errors)
+    throw Error("Introspection request failed: " + JSON.stringify(json.errors));
+
+  return json;
 }
