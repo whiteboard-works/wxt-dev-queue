@@ -1,14 +1,7 @@
-FROM oven/bun:1.3.12-alpine AS base
-
-FROM base AS builder
-WORKDIR /build
-COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile
+FROM oven/bun AS base
+WORKDIR /app
+COPY package.json package.json
+COPY bun.lock bun.lock
+RUN bun install --production --ignore-scripts
 COPY . .
-RUN bun run build
-
-FROM base
-COPY --from=builder /build/.output/server server
-RUN adduser -D app
-USER app
-ENTRYPOINT ["/server"]
+ENTRYPOINT ["bun", "src/main.ts"]
