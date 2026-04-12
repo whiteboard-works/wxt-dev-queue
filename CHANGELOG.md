@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.4.9
+
+[compare changes](https://github.com/wxt-dev/queue/compare/v0.4.8...v0.4.9)
+
+### 🚀 Enhancements
+
+- Add `FirefoxAddon.slug`, `FirefoxAddon.guid`, and `EdgeAddon.productId` to model schema ([3ce60f3](https://github.com/wxt-dev/queue/commit/3ce60f3))
+
+### 🏡 Chore
+
+- Cleanup introspection error handling ([c07c5ea](https://github.com/wxt-dev/queue/commit/c07c5ea))
+
+### 🤖 CI
+
+- Use alpine docker image ([ae3909b](https://github.com/wxt-dev/queue/commit/ae3909b))
+
+### ❤️ Contributors
+
+- Aaron ([@aklinker1](https://github.com/aklinker1))
+
 ## v0.4.8
 
 [compare changes](https://github.com/wxt-dev/queue/compare/v0.4.7...v0.4.8)
