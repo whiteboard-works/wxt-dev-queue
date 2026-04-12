@@ -7,7 +7,7 @@ export const corsPlugin = createApp()
     set.headers["Access-Control-Allow-Headers"] = "*";
     if (method === "OPTIONS") {
       set.status = 204;
-      return new Response(undefined, set);
+      return new Response("", set);
     }
   })
   .export();
