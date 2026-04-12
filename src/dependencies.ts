@@ -23,3 +23,5 @@ export const container = createIocContainer()
         [ExtensionStoreName.EdgeExtensions]: deps.edgeAddonStore,
       }) satisfies ExtensionStores,
   );
+
+export type Dependencies = typeof container.registrations;

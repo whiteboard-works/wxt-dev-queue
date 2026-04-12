@@ -1,4 +1,3 @@
 declare namespace Gql {
-  export type WxtQueueCtx =
-    (typeof import("../dependencies"))["dependencies"]["registrations"];
+  export type WxtQueueCtx = import("../dependencies").Dependencies;
 }
