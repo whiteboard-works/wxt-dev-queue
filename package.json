@@ -6,7 +6,7 @@
   "scripts": {
     "check": "check",
     "dev": "bun run --watch scripts/dev.ts",
-    "build": "bun build src/main.ts --compile --minify --sourcemap --bytecode --outfile .output/server",
+    "build": "bun build src/main.ts --compile --minify --sourcemap --outfile .output/server",
     "gen": "bun run gen:types",
     "gen:types": "bun run scripts/generate-types.ts",
     "docker:build": "docker build . -t aklinker1/store-api",
