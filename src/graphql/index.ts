@@ -3,7 +3,7 @@ import gqlSchema from "../assets/schema.gql" with { type: "text" };
 import { rootResolver } from "./resolvers";
 import { consola } from "consola";
 import pc from "picocolors";
-import { dependencies } from "../dependencies";
+import { container } from "../dependencies";
 
 export function createGraphql() {
   const schema = buildSchema(gqlSchema);
@@ -24,7 +24,7 @@ export function createGraphql() {
     const response = await graphql({
       schema,
       source: query,
-      contextValue: dependencies.resolveAll(),
+      contextValue: container.registrations,
       variableValues: variables,
       rootValue: rootResolver,
     });

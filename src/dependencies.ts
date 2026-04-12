@@ -5,7 +5,7 @@ import { createEdgeAddonStore } from "./services/edge-addon-store";
 import type { ExtensionStores } from "./services/extension-stores";
 import { ExtensionStoreName } from "./enums";
 
-export const dependencies = createIocContainer()
+export const container = createIocContainer()
   .register("chromeWebStore", createChromeWebStore)
   .register("firefoxAddonStore", createFirefoxAddonStore)
   .register("edgeAddonStore", createEdgeAddonStore)

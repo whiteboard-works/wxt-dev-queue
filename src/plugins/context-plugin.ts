@@ -1,6 +1,6 @@
 import { createApp } from "@aklinker1/zeta";
-import { dependencies } from "../dependencies";
+import { container } from "../dependencies";
 
 export const contextPlugin = createApp()
-  .decorate(dependencies.resolveAll())
+  .decorate(container.resolveAll())
   .export();
