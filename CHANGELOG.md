@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.4.8
+
+[compare changes](https://github.com/wxt-dev/queue/compare/v0.4.7...v0.4.8)
+
+### 🩹 Fixes
+
+- Fix non-working cors short-circuit ([8096d77](https://github.com/wxt-dev/queue/commit/8096d77))
+
+### ❤️ Contributors
+
+- Aaron ([@aklinker1](https://github.com/aklinker1))
+
 ## v0.4.7
 
 [compare changes](https://github.com/wxt-dev/queue/compare/v0.4.6...v0.4.7)
