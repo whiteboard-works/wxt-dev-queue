@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.4.6
+
+[compare changes](https://github.com/wxt-dev/queue/compare/v0.4.5...v0.4.6)
+
+### 🩹 Fixes
+
+- Fix production docker image startup crash ([0025b07](https://github.com/wxt-dev/queue/commit/0025b07))
+
+### 🏡 Chore
+
+- Cleanup GQL context type ([1613244](https://github.com/wxt-dev/queue/commit/1613244))
+
+### 🤖 CI
+
+- Use commit hashes for github actions ([b41b009](https://github.com/wxt-dev/queue/commit/b41b009))
+
+### ❤️ Contributors
+
+- Aaron ([@aklinker1](https://github.com/aklinker1))
+
 ## v0.4.5
 
 [compare changes](https://github.com/wxt-dev/queue/compare/v0.4.4...v0.4.5)
