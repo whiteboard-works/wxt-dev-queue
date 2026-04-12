@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.4.7
+
+[compare changes](https://github.com/wxt-dev/queue/compare/v0.4.6...v0.4.7)
+
+### 🩹 Fixes
+
+- Revert dockerfile completely ([7196fed](https://github.com/wxt-dev/queue/commit/7196fed))
+
+### ❤️ Contributors
+
+- Aaron ([@aklinker1](https://github.com/aklinker1))
+
 ## v0.4.6
 
 [compare changes](https://github.com/wxt-dev/queue/compare/v0.4.5...v0.4.6)
